@@ -35,9 +35,10 @@
 					</execution>
 				</executions>
 				<configuration>
-					<wsdlFiles>/wsdl/BookService.wsdl</wsdlFiles>
+					<wsdlFiles>BookService.wsdl</wsdlFiles>
 					<packageName>com.cts.ws</packageName>
 					<keep>true</keep>
+					<sourceDestDir>src/main/java</sourceDestDir>
 				</configuration>
 			</plugin>
 			<plugin>

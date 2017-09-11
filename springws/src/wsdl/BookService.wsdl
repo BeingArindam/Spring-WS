@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <wsdl:definitions xmlns:ns="http://ws.cts.com/BookService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BookService" targetNamespace="http://ws.cts.com/BookService/">
   <wsdl:types>
-    <xsd:schema targetNamespace="http://ws.cts.com/BookService/">
-      <xsd:import schemaLocation="../schema/BookService.xsd" namespace="http://ws.cts.com/BookService"></xsd:import>
+    <xsd:schema targetNamespace="http://ws.cts.com/BookService">
+      <xsd:import schemaLocation="BookService.xsd" namespace="http://ws.cts.com/BookService/"></xsd:import>
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="BookServiceRequest">

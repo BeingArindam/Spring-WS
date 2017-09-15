@@ -4,18 +4,18 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>web service</display-name>
-	<listener>
-		<listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
-	</listener>
-
 	<servlet>
-		<servlet-name>shopingws</servlet-name>
-		<servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+		<servlet-name>spring-ws</servlet-name>
+		<servlet-class>org.springframework.ws.transport.http.MessageDispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>transformWSDLLocations</param-name>
+			<param-value>true</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>shopingws</servlet-name>
-		<url-pattern>/shopingWS</url-pattern>
+		<servlet-name>spring-ws</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 	<session-config>
 		<session-timeout>1200</session-timeout>

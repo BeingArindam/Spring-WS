@@ -8,39 +8,33 @@
 	<name>Spring-ws</name>
 	<description>Spring Web Service contact first.</description>
 	<dependencies>
-		<dependency>
-			<groupId>com.sun.xml.ws</groupId>
-			<artifactId>jaxws-rt</artifactId>
-			<version>2.3.0</version>
-			<type>pom</type>
-		</dependency>
+		<!-- <dependency> <groupId>com.sun.xml.ws</groupId> <artifactId>jaxws-rt</artifactId> 
+			<version>2.3.0</version> <type>pom</type> </dependency> -->
 		<dependency>
 			<groupId>org.springframework.ws</groupId>
 			<artifactId>spring-ws-core</artifactId>
 			<version>2.4.0.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>1.6.3</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>springws</finalName>
 		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jaxws-maven-plugin</artifactId>
-				<version>1.12</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>wsimport</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<wsdlFiles>BookService.wsdl</wsdlFiles>
-					<packageName>com.cts.ws</packageName>
-					<keep>true</keep>
-					<sourceDestDir>src/main/java</sourceDestDir>
-				</configuration>
-			</plugin>
+			<!-- <plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>jaxws-maven-plugin</artifactId> 
+				<version>1.12</version> <executions> <execution> <goals> <goal>wsimport</goal> 
+				</goals> </execution> </executions> <configuration> <wsdlFiles>BookService.wsdl</wsdlFiles> 
+				<packageName>com.cts.ws</packageName> <keep>true</keep> <sourceDestDir>src/main/java</sourceDestDir> 
+				</configuration> </plugin> -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>

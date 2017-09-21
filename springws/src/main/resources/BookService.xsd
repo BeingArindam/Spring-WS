@@ -1,0 +1,28 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.cts.com/bookService"
+	xmlns:tns="http://ws.cts.com/bookService" elementFormDefault="qualified">
+
+	<element name="bookRequest">
+		<complexType>
+			<sequence>
+				<element name="ISBN" type="string"></element>
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="bookResponse">
+		<complexType>
+			<sequence>
+				<element name="book" type="tns:book" maxOccurs="unbounded"
+					minOccurs="0"></element>
+			</sequence>
+		</complexType>
+	</element>
+	<complexType name="book">
+		<sequence>
+			<element name="id" type="int" maxOccurs="1" minOccurs="1"></element>
+			<element name="title" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="ISBN" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="price" type="double" maxOccurs="1" minOccurs="1"></element>
+		</sequence>
+	</complexType>
+</schema>

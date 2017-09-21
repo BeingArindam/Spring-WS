@@ -15,19 +15,24 @@ import org.springframework.xml.xsd.XsdSchema;
 @ComponentScan("com.cts.ws")
 public class AppConfig extends WsConfigurerAdapter {
 
+	/*
+	 * public static void main(String[] args) {
+	 * SpringApplication.run(AppConfig.class, args); }
+	 */
+
 	@Bean(name = "bookService")
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema booksSchema) {
-		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+		final DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("BookServicePort");
 		wsdl11Definition.setLocationUri("/bookService");
 		wsdl11Definition.setTargetNamespace("http://ws.cts.com/bookService");
 		wsdl11Definition.setSchema(booksSchema);
 		return wsdl11Definition;
 	}
-	
+
 	@Bean
 	public XsdSchema booksSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("BookService.xsd"));
 	}
-	
+
 }

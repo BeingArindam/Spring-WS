@@ -11,7 +11,7 @@ import com.cts.ws.bookservice.BookResponse;
 
 
 @Endpoint
-public class BookService {
+public class BookServiceWS {
 
 	private static final String NAMESPACE = "http://ws.cts.com/bookService";
 
